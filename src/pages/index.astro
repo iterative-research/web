@@ -6,18 +6,14 @@ import Card from "../components/Card.astro";
 <Layout title="Iterative Research">
   <main>
     <div class="logo">
-      <img
-        src="/logo.png"
-        alt="Iterative Research Inc."
-        class="m-auto max-h-[30vh]"
-      />
+      <img src="logo.png" alt="Iterative Research Inc." class="m-auto h-full" />
     </div>
-
     <h1>
       Turning hard problems into <span class="text-gradient"
         >predictable solutions</span
       >
     </h1>
+
     <ul role="list" class="link-card-grid">
       <Card
         title="Experimental Development"
@@ -26,7 +22,7 @@ import Card from "../components/Card.astro";
       />
       <Card
         title="Optimized Outcomes"
-        body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenge."
+        body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
       />
       <Card
         title="Engineering Excellence"
@@ -39,70 +35,77 @@ import Card from "../components/Card.astro";
     </ul>
 
     <div class="call-to-action">
-      Do you have an uncertain idea to explore, an experiment, data-driven
-      optimization, or software engineering challenge that you need help with? <a
+      Do you have an uncertainty to explore, an experiment, data-driven
+      optimization or software engineering challenge that you need help with? <a
         href="mailto:contact@iterative.ca">Contact us</a
       > to discuss how we can help.
     </div>
     <footer>&copy; Iterative Research Inc.</footer>
   </main>
-
-  <style>
-    main {
-      margin: auto;
-      padding: 1rem;
-      padding-top: 0;
-      margin-top: -1.5rem;
-      width: 800px;
-      max-width: calc(100% - 2rem);
-      color: white;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-    footer {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.6em;
-    }
-    h1 {
-      font-size: 4rem;
-      text-align: justify;
-      text-justify: distribute;
-      font-weight: 700;
-      line-height: 1;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    @media (max-width: 960px) {
-      h1 {
-        font-size: 3rem;
-      }
-    }
-    .text-gradient {
-      background-image: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 400%;
-      background-position: 0%;
-    }
-    .link-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-      gap: 2rem;
-      padding: 0;
-    }
-
-    .call-to-action {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    .call-to-action a {
-      color: rgb(var(--accent-light));
-      text-decoration: none;
-    }
-    .call-to-action a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    padding-top: 0;
+    /* _Negative margin considered harmful_, crop the logo instead. */
+    margin-top: -1.5rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.6em;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-wrap: balance;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 960px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  .logo {
+    height: 33vh;
+    max-height: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .call-to-action {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .call-to-action a {
+    color: rgb(var(--accent-light));
+    text-decoration: none;
+  }
+  .call-to-action a:hover {
+    text-decoration: underline;
+  }
+</style>
