@@ -34,13 +34,13 @@ import Card from "../components/Card.astro";
       />
       <Card
         title="Systematic Review"
-        body="Comprehensive reviews for code, security, architecture, and processes set up to enable a detailed understanding of your software engineering operations."
+        body="Comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations—code, security, architecture, or processes."
       />
     </ul>
 
     <div class="call-to-action">
-      Do you have an uncertain experiment, data-driven optimization, or software
-      engineering challenge that you need help with? <a
+      Do you have an uncertain idea to explore, an experiment, data-driven
+      optimization, or software engineering challenge that you need help with? <a
         href="mailto:contact@iterative.ca">Contact us</a
       > to discuss how we can help.
     </div>
@@ -72,6 +72,11 @@ import Card from "../components/Card.astro";
       line-height: 1;
       text-align: center;
       margin-bottom: 2rem;
+    }
+    @media (max-width: 960px) {
+      h1 {
+        font-size: 3rem;
+      }
     }
     .text-gradient {
       background-image: var(--accent-gradient);
