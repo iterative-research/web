@@ -6,7 +6,15 @@ import Card from "../components/Card.astro";
 <Layout title="Iterative Research">
   <main>
     <div class="logo">
-      <img src="logo.png" alt="Iterative Research Inc." class="m-auto h-full" />
+      <picture>
+        <source srcset="logo.webp" type="image/webp" />
+        <source srcset="logo.png" type="image/png" />
+        <img
+          src="logo.png"
+          alt="Iterative Research Inc."
+          class="m-auto h-full"
+        />
+      </picture>
     </div>
     <h1>
       Turning hard problems into <span class="text-gradient"
