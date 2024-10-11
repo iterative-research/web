@@ -9,7 +9,7 @@ const { title, body, exaggerate } = Astro.props;
 ---
 
 <li class="link-card">
-  <div>
+  <div class="card-content">
     <h2>
       {title}
     </h2>
@@ -17,9 +17,39 @@ const { title, body, exaggerate } = Astro.props;
       {body}{" "}<strong class="italic">{exaggerate}</strong>
     </p>
   </div>
+  <div class="popover hidden">
+    <p>More details about {title}...</p>
+  </div>
 </li>
+
+<script>
+  function togglePopover() {
+    const popover = document.querySelector(".popover");
+    if (popover) {
+      popover.classList.toggle("hidden");
+    }
+  }
+
+  const cards = document.querySelectorAll(".link-card");
+  for (const card of cards) {
+    card.addEventListener("click", togglePopover);
+  }
+</script>
 <style>
+  .popover {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  .popover.hidden {
+    display: none;
+  }
   .link-card {
+    cursor: pointer;
+
     list-style: none;
     display: flex;
     padding: 1px;
