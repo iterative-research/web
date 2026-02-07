@@ -14,77 +14,84 @@ import Card from "../components/Card.astro";
         <img src="logo.png" alt="Iterative Research" class="nav-logo-img" />
       </picture>
     </a>
-    <a href="mailto:contact@iterative.ca" class="nav-cta">
-      <span class="nav-cta-dot" aria-hidden="true"></span>
-      Contact us
-    </a>
+    <div class="nav-right">
+      <a href="#services" class="nav-link font-mono">services</a>
+      <a href="mailto:contact@iterative.ca" class="nav-cta">
+        <span class="nav-cta-dot" aria-hidden="true"></span>
+        Contact us
+      </a>
+    </div>
   </nav>
 
   <!-- ─── HERO ─── -->
   <main>
     <section class="hero" aria-label="Hero">
-      <div class="hero-label animate-fade-in-up animate-delay-2">
-        <span class="font-mono" aria-hidden="true">&gt;_</span>
-        <span class="font-mono">research-driven software consultancy</span>
+      <div class="hero-logo-wrap animate-fade-in-up animate-delay-1">
+        <picture>
+          <source srcset="logo.webp" type="image/webp" />
+          <source srcset="logo.png" type="image/png" />
+          <img src="logo.png" alt="" class="hero-logo" aria-hidden="true" />
+        </picture>
+        <div class="hero-logo-tagline font-mono">research</div>
       </div>
 
-      <h1 class="hero-title animate-fade-in-up animate-delay-3">
-        Turning hard problems<br />
-        into <span class="hero-accent">predictable<span class="cursor" aria-hidden="true"></span></span><br />
-        solutions
-      </h1>
-
-      <p class="hero-sub animate-fade-in-up animate-delay-5">
-        We transform complex and uncertain engineering challenges into
-        guaranteed, measurable outcomes through rigorous experimentation
-        and systematic methodology.
-      </p>
-
-      <div class="hero-actions animate-fade-in-up animate-delay-6">
-        <a href="mailto:contact@iterative.ca" class="btn-primary">
-          Start a conversation
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#services" class="btn-ghost">
-          Our services
-        </a>
-      </div>
-    </section>
-
-    <!-- ─── TERMINAL ─── -->
-    <section class="terminal-section animate-fade-in-up animate-delay-8" aria-label="Process">
-      <div class="terminal-window">
-        <div class="terminal-chrome">
-          <div class="t-dots">
-            <span class="t-dot" style="background: #ef4444"></span>
-            <span class="t-dot" style="background: #eab308"></span>
-            <span class="t-dot" style="background: #22c55e"></span>
+      <div class="hero-content">
+        <div class="hero-left animate-fade-in-up animate-delay-3">
+          <h1 class="hero-title">
+            Turning hard problems into <span class="hero-accent">predictable<span class="cursor" aria-hidden="true"></span></span> solutions
+          </h1>
+          <p class="hero-sub">
+            We transform complex and uncertain engineering challenges into
+            guaranteed, measurable outcomes through rigorous experimentation
+            and systematic methodology.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:contact@iterative.ca" class="btn-primary">
+              Start a conversation
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#services" class="btn-ghost">
+              Our services
+            </a>
           </div>
-          <span class="t-title font-mono">iterative-process.sh</span>
         </div>
-        <div class="terminal-body font-mono">
-          <div class="t-line" style="--line-delay: 0.0s">
-            <span class="t-prompt">$</span>
-            <span class="t-cmd">iterative init --mode=discovery</span>
-          </div>
-          <div class="t-line" style="--line-delay: 0.3s">
-            <span class="t-out">&rarr; Analyzing problem space...</span>
-          </div>
-          <div class="t-line" style="--line-delay: 0.6s">
-            <span class="t-out">&rarr; Mapping uncertainty boundaries...</span>
-          </div>
-          <div class="t-line" style="--line-delay: 0.9s">
-            <span class="t-prompt">$</span>
-            <span class="t-cmd">iterative run --experiments=parallel</span>
-          </div>
-          <div class="t-line" style="--line-delay: 1.2s">
-            <span class="t-out">&rarr; Running controlled experiments...</span>
-          </div>
-          <div class="t-line" style="--line-delay: 1.5s">
-            <span class="t-out">&rarr; Converging on optimal solution...</span>
-          </div>
-          <div class="t-line" style="--line-delay: 1.8s">
-            <span class="t-success">&#10003; Solution delivered. Risk eliminated.</span>
+
+        <div class="hero-right animate-fade-in-up animate-delay-5">
+          <!-- Mini terminal -->
+          <div class="terminal-window">
+            <div class="terminal-chrome">
+              <div class="t-dots">
+                <span class="t-dot" style="background: #ef4444"></span>
+                <span class="t-dot" style="background: #eab308"></span>
+                <span class="t-dot" style="background: #22c55e"></span>
+              </div>
+              <span class="t-title font-mono">iterative-process.sh</span>
+            </div>
+            <div class="terminal-body font-mono">
+              <div class="t-line" style="--line-delay: 0.0s">
+                <span class="t-prompt">$</span>
+                <span class="t-cmd">iterative init --mode=discovery</span>
+              </div>
+              <div class="t-line" style="--line-delay: 0.3s">
+                <span class="t-out">&rarr; Analyzing problem space...</span>
+              </div>
+              <div class="t-line" style="--line-delay: 0.6s">
+                <span class="t-out">&rarr; Mapping uncertainty boundaries...</span>
+              </div>
+              <div class="t-line" style="--line-delay: 0.9s">
+                <span class="t-prompt">$</span>
+                <span class="t-cmd">iterative run --experiments</span>
+              </div>
+              <div class="t-line" style="--line-delay: 1.2s">
+                <span class="t-out">&rarr; Running controlled experiments...</span>
+              </div>
+              <div class="t-line" style="--line-delay: 1.5s">
+                <span class="t-out">&rarr; Converging on optimal solution...</span>
+              </div>
+              <div class="t-line" style="--line-delay: 1.8s">
+                <span class="t-success">&#10003; Solution delivered. Risk eliminated.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -92,54 +99,48 @@ import Card from "../components/Card.astro";
 
     <!-- ─── SERVICES ─── -->
     <section class="services-section" id="services" aria-label="Services">
-      <div class="section-label font-mono animate-fade-in-up">
-        <span class="label-dot" aria-hidden="true"></span>
-        services
+      <div class="services-header">
+        <div class="section-label font-mono">
+          <span class="label-dot" aria-hidden="true"></span>
+          services
+        </div>
+        <h2 class="section-title">What we do</h2>
       </div>
-      <h2 class="section-title animate-fade-in-up">What we do</h2>
 
       <ul class="services-grid" role="list">
-        <div class="animate-fade-in-up animate-delay-1">
-          <Card
-            title="Experimental Development"
-            body="Transform complex and uncertain software engineering projects into guaranteed, predictable outcomes by letting us take the lead"
-            exaggerate="...and the risk."
-            index="01"
-            filename="experiment.ts"
-          />
-        </div>
-        <div class="animate-fade-in-up animate-delay-2">
-          <Card
-            title="Optimized Outcomes"
-            body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
-            index="02"
-            filename="optimize.ts"
-          />
-        </div>
-        <div class="animate-fade-in-up animate-delay-3">
-          <Card
-            title="Engineering Excellence"
-            body="Bring your software engineering operations to the next level with our expert strategic guidance — team performance, effective, joyful process, and industry-leading quality automation."
-            index="03"
-            filename="engineer.ts"
-          />
-        </div>
-        <div class="animate-fade-in-up animate-delay-4">
-          <Card
-            title="Systematic Review"
-            body="Comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations — code, security, architecture, or processes."
-            index="04"
-            filename="review.ts"
-          />
-        </div>
+        <Card
+          title="Experimental Development"
+          body="Transform complex and uncertain software engineering projects into guaranteed, predictable outcomes by letting us take the lead"
+          exaggerate="...and the risk."
+          index="01"
+          filename="experiment.ts"
+        />
+        <Card
+          title="Optimized Outcomes"
+          body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
+          index="02"
+          filename="optimize.ts"
+        />
+        <Card
+          title="Engineering Excellence"
+          body="Bring your software engineering operations to the next level with our expert strategic guidance — team performance, effective, joyful process, and industry-leading quality automation."
+          index="03"
+          filename="engineer.ts"
+        />
+        <Card
+          title="Systematic Review"
+          body="Comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations — code, security, architecture, or processes."
+          index="04"
+          filename="review.ts"
+        />
       </ul>
     </section>
 
     <!-- ─── CTA ─── -->
-    <section class="cta-section animate-fade-in-up" aria-label="Contact">
+    <section class="cta-section" aria-label="Contact">
       <div class="cta-box">
         <div class="cta-prompt font-mono" aria-hidden="true">
-          <span class="cta-chevron">&gt;</span> ready_to_start<span class="cursor"></span>
+          <span class="cta-chevron">&gt;</span> ready_to_start
         </div>
         <h2 class="cta-title">
           Have an uncertainty to explore?
@@ -156,17 +157,44 @@ import Card from "../components/Card.astro";
     </section>
   </main>
 
-  <!-- ─── FOOTER ─── -->
-  <footer class="status-bar font-mono" role="contentinfo">
-    <div class="status-left">
-      <span class="status-indicator" aria-hidden="true"></span>
-      <span>ready</span>
+  <!-- ─── VSCODE STATUS BAR ─── -->
+  <footer class="vscode-bar font-mono" role="contentinfo">
+    <div class="vscode-left">
+      <div class="vscode-segment vscode-remote">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M14.12 9.87L12.24 8l1.88-1.87a.5.5 0 000-.71l-3.54-3.54a.5.5 0 00-.71 0L8 3.76 6.13 1.88a.5.5 0 00-.71 0L1.88 5.42a.5.5 0 000 .71L3.76 8l-1.88 1.87a.5.5 0 000 .71l3.54 3.54a.5.5 0 00.71 0L8 12.24l1.87 1.88a.5.5 0 00.71 0l3.54-3.54a.5.5 0 000-.71z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="vscode-segment vscode-branch">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M11.75 5a1.75 1.75 0 10-1.5 1.732v1.018a.25.25 0 01-.25.25H6a.25.25 0 01-.25-.25V6.732a1.75 1.75 0 10-1.5 0v2.536a1.75 1.75 0 101.5 0V8.25A1.75 1.75 0 007.5 10h2.5a1.75 1.75 0 001.75-1.75V6.732A1.75 1.75 0 0011.75 5z" fill="currentColor"/>
+        </svg>
+        main
+      </div>
+      <div class="vscode-segment vscode-errors">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.36 9.65a.5.5 0 01-.71.71L8 8.71l-2.65 2.65a.5.5 0 01-.71-.71L7.29 8 4.64 5.35a.5.5 0 01.71-.71L8 7.29l2.65-2.65a.5.5 0 01.71.71L8.71 8l2.65 2.65z" fill="currentColor"/>
+        </svg>
+        0
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="margin-left: 6px;">
+          <path d="M7.56 1.07a.75.75 0 01.88 0l6 4.5a.75.75 0 01-.88 1.22L8 2.85 2.44 6.79a.75.75 0 01-.88-1.22l6-4.5zM7.25 8a.75.75 0 011.5 0v4.25a.75.75 0 01-1.5 0V8z" fill="currentColor"/>
+        </svg>
+        0
+      </div>
     </div>
-    <div class="status-center">
+    <div class="vscode-center">
       &copy; {new Date().getFullYear()} Iterative Research Inc.
     </div>
-    <div class="status-right">
-      <span>iterative.ca</span>
+    <div class="vscode-right">
+      <div class="vscode-segment">Ln 1, Col 1</div>
+      <div class="vscode-segment">Spaces: 2</div>
+      <div class="vscode-segment">UTF-8</div>
+      <div class="vscode-segment">TypeScript</div>
+      <div class="vscode-segment vscode-bell">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 1.5A3.25 3.25 0 004.75 4.75v2.013c0 .58-.179 1.146-.513 1.62l-.91 1.29A1.25 1.25 0 004.35 12h7.3a1.25 1.25 0 001.023-1.327l-.91-1.29a2.75 2.75 0 01-.513-1.62V4.75A3.25 3.25 0 008 1.5zM6.5 13.5a1.5 1.5 0 003 0h-3z" fill="currentColor"/>
+        </svg>
+      </div>
     </div>
   </footer>
 
@@ -181,17 +209,35 @@ import Card from "../components/Card.astro";
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.625rem 1.5rem;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(9, 9, 11, 0.8);
+    background: rgba(9, 9, 11, 0.85);
     border-bottom: 1px solid var(--surface-border);
   }
 
   .nav-logo-img {
-    height: 28px;
+    height: 22px;
     width: auto;
     display: block;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--text-muted);
   }
 
   .nav-cta {
@@ -199,12 +245,12 @@ import Card from "../components/Card.astro";
     align-items: center;
     gap: 0.5rem;
     font-family: 'Geist Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.375rem 0.875rem;
     border: 1px solid var(--surface-border);
-    border-radius: 6px;
+    border-radius: 4px;
     transition: all 0.2s ease;
     letter-spacing: 0.02em;
   }
@@ -227,37 +273,47 @@ import Card from "../components/Card.astro";
   .hero {
     position: relative;
     z-index: 1;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 6rem 2rem 4rem;
-    text-align: center;
+    padding: 2rem 1.5rem 1.5rem;
   }
 
-  .hero-label {
-    display: inline-flex;
-    align-items: center;
+  /* Large logo */
+  .hero-logo-wrap {
+    display: flex;
+    align-items: baseline;
     gap: 0.5rem;
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 1.5rem;
-    padding: 0.375rem 0.875rem;
-    background: var(--surface);
-    border: 1px solid var(--surface-border);
-    border-radius: 100px;
+    margin-bottom: 2.5rem;
   }
 
-  .hero-label span:first-child {
-    color: var(--red);
+  .hero-logo {
+    display: block;
+    width: clamp(320px, 50vw, 560px);
+    height: auto;
+  }
+
+  .hero-logo-tagline {
+    font-size: clamp(1.5rem, 3vw, 2.75rem);
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: -0.02em;
+    transform: translateY(-0.15em);
+  }
+
+  /* Two-column hero */
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
     font-weight: 800;
-    line-height: 1.08;
+    line-height: 1.15;
     letter-spacing: -0.03em;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1rem;
     text-wrap: balance;
   }
 
@@ -268,7 +324,7 @@ import Card from "../components/Card.astro";
 
   .cursor {
     display: inline-block;
-    width: 3px;
+    width: 2px;
     height: 0.85em;
     background: var(--red);
     margin-left: 2px;
@@ -277,19 +333,16 @@ import Card from "../components/Card.astro";
   }
 
   .hero-sub {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.65;
     color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    text-wrap: balance;
+    margin: 0 0 1.25rem;
   }
 
   .hero-actions {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
   }
 
@@ -297,14 +350,14 @@ import Card from "../components/Card.astro";
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
     background: var(--red);
     color: #fff;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 4px;
     border: none;
     transition: all 0.2s ease;
     letter-spacing: 0.01em;
@@ -317,20 +370,20 @@ import Card from "../components/Card.astro";
   }
 
   .btn-lg {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
   }
 
   .btn-ghost {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
     color: var(--text-muted);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 4px;
     border: 1px solid var(--surface-border);
     transition: all 0.2s ease;
   }
@@ -341,27 +394,19 @@ import Card from "../components/Card.astro";
     background: rgba(255, 255, 255, 0.03);
   }
 
-  /* ─── TERMINAL SECTION ─── */
-  .terminal-section {
-    position: relative;
-    z-index: 1;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 2rem 5rem;
-  }
-
+  /* ─── TERMINAL (inside hero) ─── */
   .terminal-window {
     background: var(--surface);
     border: 1px solid var(--surface-border);
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
   }
 
   .terminal-chrome {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.625rem 0.875rem;
+    gap: 0.625rem;
+    padding: 0.5rem 0.75rem;
     border-bottom: 1px solid var(--surface-border);
     background: rgba(255, 255, 255, 0.02);
   }
@@ -372,32 +417,32 @@ import Card from "../components/Card.astro";
   }
 
   .t-dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
   }
 
   .t-title {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--text-dim);
     letter-spacing: 0.02em;
   }
 
   .terminal-body {
-    padding: 1.25rem;
-    font-size: 0.8rem;
-    line-height: 1.8;
+    padding: 0.875rem 1rem;
+    font-size: 0.72rem;
+    line-height: 1.75;
   }
 
   .t-line {
     opacity: 0;
     animation: fadeInUp 0.4s ease-out forwards;
-    animation-delay: calc(0.8s + var(--line-delay, 0s));
+    animation-delay: calc(1s + var(--line-delay, 0s));
   }
 
   .t-prompt {
     color: var(--red);
-    margin-right: 0.5rem;
+    margin-right: 0.375rem;
     font-weight: 600;
   }
 
@@ -407,7 +452,7 @@ import Card from "../components/Card.astro";
 
   .t-out {
     color: var(--text-dim);
-    padding-left: 1rem;
+    padding-left: 0.875rem;
   }
 
   .t-success {
@@ -419,33 +464,37 @@ import Card from "../components/Card.astro";
   .services-section {
     position: relative;
     z-index: 1;
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 2rem 5rem;
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .services-header {
+    margin-bottom: 1.5rem;
   }
 
   .section-label {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.7rem;
+    gap: 0.4rem;
+    font-size: 0.65rem;
     color: var(--text-dim);
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.375rem;
   }
 
   .label-dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--red);
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin: 0 0 2.5rem;
+    margin: 0;
     letter-spacing: -0.02em;
     color: var(--text);
   }
@@ -453,32 +502,26 @@ import Card from "../components/Card.astro";
   .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 1rem;
     padding: 0;
     margin: 0;
-  }
-
-  @media (max-width: 700px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
   }
 
   /* ─── CTA SECTION ─── */
   .cta-section {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2rem 5rem;
+    padding: 0 1.5rem 6rem;
   }
 
   .cta-box {
     text-align: center;
-    padding: 3.5rem 2rem;
+    padding: 2.5rem 1.5rem;
     background: var(--surface);
     border: 1px solid var(--surface-border);
-    border-radius: 12px;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
   }
@@ -495,9 +538,9 @@ import Card from "../components/Card.astro";
   }
 
   .cta-prompt {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-dim);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .cta-chevron {
@@ -506,85 +549,133 @@ import Card from "../components/Card.astro";
   }
 
   .cta-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin: 0 0 1rem;
+    margin: 0 0 0.625rem;
     letter-spacing: -0.02em;
     color: var(--text);
   }
 
   .cta-text {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.65;
     color: var(--text-muted);
     max-width: 540px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
     text-wrap: balance;
   }
 
-  /* ─── STATUS BAR FOOTER ─── */
-  .status-bar {
-    position: relative;
-    z-index: 1;
+  /* ─── VSCODE STATUS BAR ─── */
+  .vscode-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
+    height: 22px;
+    padding: 0 0.5rem;
     font-size: 0.65rem;
-    color: var(--text-dim);
-    border-top: 1px solid var(--surface-border);
-    background: var(--surface);
-    letter-spacing: 0.04em;
+    color: #cccccc;
+    background: #007acc;
+    user-select: none;
   }
 
-  .status-left {
+  .vscode-left,
+  .vscode-right {
     display: flex;
     align-items: center;
-    gap: 0.375rem;
+    gap: 0;
+    height: 100%;
   }
 
-  .status-indicator {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #22c55e;
-  }
-
-  .status-center {
+  .vscode-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
   }
 
-  .status-right {
-    color: var(--text-dim);
+  .vscode-segment {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 7px;
+    height: 100%;
+    color: #ffffff;
+    transition: background 0.15s ease;
+    cursor: default;
+    white-space: nowrap;
   }
 
-  @media (max-width: 600px) {
+  .vscode-segment:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .vscode-remote {
+    background: #16825d;
+    padding: 0 8px;
+  }
+
+  .vscode-remote:hover {
+    background: #1a9e6f;
+  }
+
+  .vscode-branch svg,
+  .vscode-errors svg,
+  .vscode-bell svg,
+  .vscode-remote svg {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
     .hero {
-      padding: 4rem 1.25rem 3rem;
+      padding: 1.5rem 1rem 1rem;
+    }
+
+    .hero-logo {
+      width: clamp(200px, 70vw, 320px);
+    }
+
+    .hero-logo-tagline {
+      font-size: 1.25rem;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
     .hero-title {
-      font-size: 2.25rem;
+      font-size: 1.5rem;
     }
 
     .nav {
-      padding: 0.75rem 1.25rem;
+      padding: 0.5rem 1rem;
     }
 
-    .terminal-section,
     .services-section,
     .cta-section {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
     }
 
     .cta-box {
-      padding: 2.5rem 1.25rem;
+      padding: 2rem 1rem;
     }
 
-    .status-center {
+    .vscode-center {
+      display: none;
+    }
+
+    .vscode-right .vscode-segment:not(.vscode-bell) {
       display: none;
     }
   }
@@ -596,17 +687,16 @@ import Card from "../components/Card.astro";
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in-up');
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
   );
 
-  // Observe service cards and CTA when in services section
-  document.querySelectorAll('.services-section .animate-fade-in-up, .cta-section').forEach((el) => {
-    el.style.opacity = '0';
+  document.querySelectorAll('.services-grid li, .cta-section').forEach((el) => {
+    el.classList.add('scroll-reveal');
     observer.observe(el);
   });
 </script>
