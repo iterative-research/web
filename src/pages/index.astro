@@ -3,127 +3,610 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="Iterative Research">
-  <main>
-    <div class="logo">
+<Layout title="Iterative Research — Predictable Solutions">
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav animate-fade-in-up">
+    <a href="/" class="nav-logo" aria-label="Iterative Research Home">
       <picture>
         <source srcset="logo.webp" type="image/webp" />
         <source srcset="logo.png" type="image/png" />
-        <img
-          src="logo.png"
-          alt="Iterative Research Inc."
-          class="m-auto aspect-auto"
-        />
+        <img src="logo.png" alt="Iterative Research" class="nav-logo-img" />
       </picture>
-    </div>
-    <h1>
-      Turning hard problems into <span class="text-gradient"
-        >predictable solutions</span
-      >
-    </h1>
+    </a>
+    <a href="mailto:contact@iterative.ca" class="nav-cta">
+      <span class="nav-cta-dot" aria-hidden="true"></span>
+      Contact us
+    </a>
+  </nav>
 
-    <ul role="list" class="link-card-grid">
-      <Card
-        title="Experimental Development"
-        body="Transform complex and uncertain software engineering projects into guaranteed, predictable outcomes by letting us take the lead"
-        exaggerate="...and the risk."
-      />
-      <Card
-        title="Optimized Outcomes"
-        body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
-      />
-      <Card
-        title="Engineering Excellence"
-        body="Bring your software engineering operations to the next level with our expert strategic guidance—team performance, effective, joyful process, and industry-leading quality automation."
-      />
-      <Card
-        title="Systematic Review"
-        body="Comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations—code, security, architecture, or processes."
-      />
-    </ul>
+  <!-- ─── HERO ─── -->
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero-label animate-fade-in-up animate-delay-2">
+        <span class="font-mono" aria-hidden="true">&gt;_</span>
+        <span class="font-mono">research-driven software consultancy</span>
+      </div>
 
-    <div class="call-to-action">
-      Do you have an uncertainty to explore, an experiment, data-driven
-      optimization or software engineering challenge that you need help with? <a
-        href="mailto:contact@iterative.ca">Contact us</a
-      > to discuss how we can help.
-    </div>
-    <footer>&copy; Iterative Research Inc.</footer>
+      <h1 class="hero-title animate-fade-in-up animate-delay-3">
+        Turning hard problems<br />
+        into <span class="hero-accent">predictable<span class="cursor" aria-hidden="true"></span></span><br />
+        solutions
+      </h1>
+
+      <p class="hero-sub animate-fade-in-up animate-delay-5">
+        We transform complex and uncertain engineering challenges into
+        guaranteed, measurable outcomes through rigorous experimentation
+        and systematic methodology.
+      </p>
+
+      <div class="hero-actions animate-fade-in-up animate-delay-6">
+        <a href="mailto:contact@iterative.ca" class="btn-primary">
+          Start a conversation
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a href="#services" class="btn-ghost">
+          Our services
+        </a>
+      </div>
+    </section>
+
+    <!-- ─── TERMINAL ─── -->
+    <section class="terminal-section animate-fade-in-up animate-delay-8" aria-label="Process">
+      <div class="terminal-window">
+        <div class="terminal-chrome">
+          <div class="t-dots">
+            <span class="t-dot" style="background: #ef4444"></span>
+            <span class="t-dot" style="background: #eab308"></span>
+            <span class="t-dot" style="background: #22c55e"></span>
+          </div>
+          <span class="t-title font-mono">iterative-process.sh</span>
+        </div>
+        <div class="terminal-body font-mono">
+          <div class="t-line" style="--line-delay: 0.0s">
+            <span class="t-prompt">$</span>
+            <span class="t-cmd">iterative init --mode=discovery</span>
+          </div>
+          <div class="t-line" style="--line-delay: 0.3s">
+            <span class="t-out">&rarr; Analyzing problem space...</span>
+          </div>
+          <div class="t-line" style="--line-delay: 0.6s">
+            <span class="t-out">&rarr; Mapping uncertainty boundaries...</span>
+          </div>
+          <div class="t-line" style="--line-delay: 0.9s">
+            <span class="t-prompt">$</span>
+            <span class="t-cmd">iterative run --experiments=parallel</span>
+          </div>
+          <div class="t-line" style="--line-delay: 1.2s">
+            <span class="t-out">&rarr; Running controlled experiments...</span>
+          </div>
+          <div class="t-line" style="--line-delay: 1.5s">
+            <span class="t-out">&rarr; Converging on optimal solution...</span>
+          </div>
+          <div class="t-line" style="--line-delay: 1.8s">
+            <span class="t-success">&#10003; Solution delivered. Risk eliminated.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section class="services-section" id="services" aria-label="Services">
+      <div class="section-label font-mono animate-fade-in-up">
+        <span class="label-dot" aria-hidden="true"></span>
+        services
+      </div>
+      <h2 class="section-title animate-fade-in-up">What we do</h2>
+
+      <ul class="services-grid" role="list">
+        <div class="animate-fade-in-up animate-delay-1">
+          <Card
+            title="Experimental Development"
+            body="Transform complex and uncertain software engineering projects into guaranteed, predictable outcomes by letting us take the lead"
+            exaggerate="...and the risk."
+            index="01"
+            filename="experiment.ts"
+          />
+        </div>
+        <div class="animate-fade-in-up animate-delay-2">
+          <Card
+            title="Optimized Outcomes"
+            body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
+            index="02"
+            filename="optimize.ts"
+          />
+        </div>
+        <div class="animate-fade-in-up animate-delay-3">
+          <Card
+            title="Engineering Excellence"
+            body="Bring your software engineering operations to the next level with our expert strategic guidance — team performance, effective, joyful process, and industry-leading quality automation."
+            index="03"
+            filename="engineer.ts"
+          />
+        </div>
+        <div class="animate-fade-in-up animate-delay-4">
+          <Card
+            title="Systematic Review"
+            body="Comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations — code, security, architecture, or processes."
+            index="04"
+            filename="review.ts"
+          />
+        </div>
+      </ul>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="cta-section animate-fade-in-up" aria-label="Contact">
+      <div class="cta-box">
+        <div class="cta-prompt font-mono" aria-hidden="true">
+          <span class="cta-chevron">&gt;</span> ready_to_start<span class="cursor"></span>
+        </div>
+        <h2 class="cta-title">
+          Have an uncertainty to explore?
+        </h2>
+        <p class="cta-text">
+          Whether it's an experiment, data-driven optimization, or software engineering
+          challenge — we're here to help turn it into a predictable outcome.
+        </p>
+        <a href="mailto:contact@iterative.ca" class="btn-primary btn-lg">
+          contact@iterative.ca
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="status-bar font-mono" role="contentinfo">
+    <div class="status-left">
+      <span class="status-indicator" aria-hidden="true"></span>
+      <span>ready</span>
+    </div>
+    <div class="status-center">
+      &copy; {new Date().getFullYear()} Iterative Research Inc.
+    </div>
+    <div class="status-right">
+      <span>iterative.ca</span>
+    </div>
+  </footer>
+
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    padding-top: 0;
-    /* _Negative margin considered harmful_, crop the logo instead. */
-    margin-top: -1.5rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  footer {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.6em;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    text-wrap: balance;
-    margin-bottom: 2rem;
-  }
-  .logo {
-    height: 33vh;
-    max-height: fit-content;
-    margin: 0 auto;
-    overflow: hidden;
-
+  /* ─── NAV ─── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(9, 9, 11, 0.8);
+    border-bottom: 1px solid var(--surface-border);
   }
 
-  @media (max-width: 960px) {
-    h1 {
-      font-size: 3rem;
-    }
-    .logo {
-      height: 25vh;
-    }
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
-    margin-top: 2.5rem;
+  .nav-logo-img {
+    height: 28px;
+    width: auto;
+    display: block;
   }
 
-  .call-to-action {
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
+  }
 
+  .nav-cta:hover {
+    color: var(--text);
+    border-color: var(--red-dim);
+    background: var(--red-glow);
+  }
+
+  .nav-cta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    animation: blink 2s infinite;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem;
     text-align: center;
+  }
+
+  .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    padding: 0.375rem 0.875rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 100px;
+  }
+
+  .hero-label span:first-child {
+    color: var(--red);
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 0 0 1.5rem;
     text-wrap: balance;
   }
-  .call-to-action a {
-    color: rgb(var(--accent-light));
-    text-decoration: none;
+
+  .hero-accent {
+    color: var(--red);
+    position: relative;
   }
-  .call-to-action a:hover {
-    text-decoration: underline;
+
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    height: 0.85em;
+    background: var(--red);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    text-wrap: balance;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--red);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary:hover {
+    background: #b71c25;
+    box-shadow: 0 0 24px var(--red-glow);
+    transform: translateY(-1px);
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--surface-border);
+    transition: all 0.2s ease;
+  }
+
+  .btn-ghost:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  /* ─── TERMINAL SECTION ─── */
+  .terminal-section {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+  }
+
+  .terminal-window {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .terminal-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.875rem;
+    border-bottom: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .t-dots {
+    display: flex;
+    gap: 5px;
+  }
+
+  .t-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .t-title {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
+  }
+
+  .terminal-body {
+    padding: 1.25rem;
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+
+  .t-line {
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: calc(0.8s + var(--line-delay, 0s));
+  }
+
+  .t-prompt {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-weight: 600;
+  }
+
+  .t-cmd {
+    color: var(--text);
+  }
+
+  .t-out {
+    color: var(--text-dim);
+    padding-left: 1rem;
+  }
+
+  .t-success {
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-section {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+  }
+
+  .label-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 2.5rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ─── CTA SECTION ─── */
+  .cta-section {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+  }
+
+  .cta-box {
+    text-align: center;
+    padding: 3.5rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+  }
+
+  .cta-prompt {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-chevron {
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .cta-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto 2rem;
+    text-wrap: balance;
+  }
+
+  /* ─── STATUS BAR FOOTER ─── */
+  .status-bar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    border-top: 1px solid var(--surface-border);
+    background: var(--surface);
+    letter-spacing: 0.04em;
+  }
+
+  .status-left {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .status-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+  }
+
+  .status-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .status-right {
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 4rem 1.25rem 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+    }
+
+    .nav {
+      padding: 0.75rem 1.25rem;
+    }
+
+    .terminal-section,
+    .services-section,
+    .cta-section {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .cta-box {
+      padding: 2.5rem 1.25rem;
+    }
+
+    .status-center {
+      display: none;
+    }
   }
 </style>
+
+<script>
+  // Intersection Observer for scroll-triggered animations
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  // Observe service cards and CTA when in services section
+  document.querySelectorAll('.services-section .animate-fade-in-up, .cta-section').forEach((el) => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
