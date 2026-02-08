@@ -3,127 +3,879 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="Iterative Research">
+<Layout title="Iterative Research — Predictable Solutions">
+  <!-- ─── HERO ─── -->
   <main>
-    <div class="logo">
-      <picture>
-        <source srcset="logo.webp" type="image/webp" />
-        <source srcset="logo.png" type="image/png" />
-        <img
-          src="logo.png"
-          alt="Iterative Research Inc."
-          class="m-auto aspect-auto"
+    <section class="hero" aria-label="Hero">
+      <div class="hero-logo-wrap animate-fade-in-up animate-delay-1">
+        <picture>
+          <source srcset="logo.webp" type="image/webp" />
+          <source srcset="logo.png" type="image/png" />
+          <img src="logo.png" alt="Iterative Research" class="hero-logo" />
+        </picture>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-left animate-fade-in-up animate-delay-3">
+          <h1 class="hero-title">
+            Turning hard problems into <span class="hero-accent"
+              >predictable<span class="cursor" aria-hidden="true"></span></span
+            > solutions
+          </h1>
+          <div>
+            <p class="hero-sub">
+              We execute experimental development work under real technical
+              uncertainty, transforming ambiguous engineering and research
+              challenges into measurable, auditable outcomes through disciplined
+              experimentation.
+            </p>
+            <p class="hero-sub">
+              From risky software development to conversion optimization or
+              business model innovation, we structure the work as to identify
+              and resolve uncertainties systematically.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <a href="mailto:contact@iterative.ca" class="btn-primary">
+              Start a conversation
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right animate-fade-in-up animate-delay-5">
+          <!-- Stylized pipeline visualization -->
+          <div class="pipeline-window">
+            <div class="pipeline-chrome">
+              <div class="pipeline-tabs">
+                <div class="pipeline-tab active font-mono">
+                  <span class="tab-icon" aria-hidden="true">&#9654;</span>
+                  pipeline
+                </div>
+                <div class="pipeline-tab font-mono">output</div>
+                <div class="pipeline-tab font-mono">metrics</div>
+              </div>
+            </div>
+            <div class="pipeline-body font-mono">
+              <div class="pipeline-header">
+                <span class="pipeline-run-label">RUN #47</span>
+                <span class="pipeline-ts">2m 14s</span>
+              </div>
+              <div class="pipeline-stages">
+                <div class="stage" style="--stage-delay: 0.0s">
+                  <div class="stage-row">
+                    <span class="stage-status done" aria-label="Complete"
+                      >&#10003;</span
+                    >
+                    <span class="stage-name">Discovery</span>
+                    <span class="stage-time">12s</span>
+                  </div>
+                  <div class="stage-bar">
+                    <div
+                      class="stage-fill"
+                      style="--fill: 100%; --bar-delay: 0.3s"
+                    >
+                    </div>
+                  </div>
+                  <div class="stage-detail">
+                    Mapped 3 uncertainty boundaries
+                  </div>
+                </div>
+                <div class="stage-connector" aria-hidden="true">
+                  <span class="connector-line"></span>
+                </div>
+                <div class="stage" style="--stage-delay: 0.4s">
+                  <div class="stage-row">
+                    <span class="stage-status done" aria-label="Complete"
+                      >&#10003;</span
+                    >
+                    <span class="stage-name">Experimentation</span>
+                    <span class="stage-time">1m 38s</span>
+                  </div>
+                  <div class="stage-bar">
+                    <div
+                      class="stage-fill"
+                      style="--fill: 100%; --bar-delay: 0.7s"
+                    >
+                    </div>
+                  </div>
+                  <div class="stage-detail">14 experiments, 6 converged</div>
+                </div>
+                <div class="stage-connector" aria-hidden="true">
+                  <span class="connector-line"></span>
+                </div>
+                <div class="stage" style="--stage-delay: 0.8s">
+                  <div class="stage-row">
+                    <span class="stage-status done" aria-label="Complete"
+                      >&#10003;</span
+                    >
+                    <span class="stage-name">Optimization</span>
+                    <span class="stage-time">18s</span>
+                  </div>
+                  <div class="stage-bar">
+                    <div
+                      class="stage-fill"
+                      style="--fill: 100%; --bar-delay: 1.1s"
+                    >
+                    </div>
+                  </div>
+                  <div class="stage-detail">Risk reduced to {"<"}0.02%</div>
+                </div>
+                <div class="stage-connector" aria-hidden="true">
+                  <span class="connector-line"></span>
+                </div>
+                <div class="stage" style="--stage-delay: 1.2s">
+                  <div class="stage-row">
+                    <span class="stage-status done" aria-label="Complete"
+                      >&#10003;</span
+                    >
+                    <span class="stage-name">Delivery</span>
+                    <span class="stage-time">6s</span>
+                  </div>
+                  <div class="stage-bar">
+                    <div
+                      class="stage-fill"
+                      style="--fill: 100%; --bar-delay: 1.5s"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pipeline-result" style="--stage-delay: 1.6s">
+                <span class="result-icon" aria-hidden="true">&#9679;</span>
+                All stages passed &middot; Solution delivered
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section class="services-section" id="services" aria-label="Services">
+      <div class="services-header">
+        <div class="section-label font-mono">
+          <span class="label-dot" aria-hidden="true"></span>
+          services
+        </div>
+        <h2 class="section-title">What we do</h2>
+      </div>
+
+      <ul class="services-grid" role="list">
+        <Card
+          title="Experimental Development"
+          body="Transform complex and uncertain software engineering projects into guaranteed, predictable outcomes by letting us take the lead"
+          exaggerate="...and the risk."
+          index="01"
+          filename="experiment.ts"
         />
-      </picture>
-    </div>
-    <h1>
-      Turning hard problems into <span class="text-gradient"
-        >predictable solutions</span
-      >
-    </h1>
 
-    <ul role="list" class="link-card-grid">
-      <Card
-        title="Experimental Development"
-        body="Transform complex and uncertain software engineering projects into guaranteed, predictable outcomes by letting us take the lead"
-        exaggerate="...and the risk."
-      />
-      <Card
-        title="Optimized Outcomes"
-        body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
-      />
-      <Card
-        title="Engineering Excellence"
-        body="Bring your software engineering operations to the next level with our expert strategic guidance—team performance, effective, joyful process, and industry-leading quality automation."
-      />
-      <Card
-        title="Systematic Review"
-        body="Comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations—code, security, architecture, or processes."
-      />
-    </ul>
+        <Card
+          title="Optimized Outcomes"
+          body="Leverage cutting-edge experimentation techniques for conversion rate optimization, recommender systems, business model innovation, or any other learning-while-earning challenges."
+          index="02"
+          filename="optimize.ts"
+        />
+        <Card
+          title="Engineering Excellence"
+          body="Build durable AI engineering organizations with strong foundations—model evaluation pipelines, observability, prompt and model lifecycle management, and automation that keeps quality high as systems evolve."
+          index="03"
+          filename="engineer.ts"
+        />
 
-    <div class="call-to-action">
-      Do you have an uncertainty to explore, an experiment, data-driven
-      optimization or software engineering challenge that you need help with? <a
-        href="mailto:contact@iterative.ca">Contact us</a
-      > to discuss how we can help.
-    </div>
-    <footer>&copy; Iterative Research Inc.</footer>
+        <Card
+          title="Systematic Review"
+          body="AI-enabled comprehensive reviews and insights for diligence, for management, or just external eyes for technical leads to help understand, document and improve your software engineering operations."
+          index="04"
+          filename="review.ts"
+        />
+      </ul>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="cta-section" aria-label="Contact">
+      <div class="cta-box">
+        <div class="cta-content">
+          <div class="cta-prompt font-mono" aria-hidden="true">
+            <span class="cta-chevron">&gt;</span> ready_to_start
+          </div>
+          <h2 class="cta-title">Have an uncertainty to explore?</h2>
+          <p class="cta-text">
+            Whether it's an experiment, data-driven optimization, or software
+            engineering challenge — we're here to help turn it into a
+            predictable outcome.
+          </p>
+        </div>
+        <a
+          href="mailto:contact@iterative.ca"
+          class="btn-primary btn-lg cta-button"
+        >
+          Get in touch
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <!-- ─── VSCODE STATUS BAR ─── -->
+  <footer class="vscode-bar font-mono" role="contentinfo">
+    <div class="vscode-left">
+      <div class="vscode-segment vscode-remote">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M14.12 9.87L12.24 8l1.88-1.87a.5.5 0 000-.71l-3.54-3.54a.5.5 0 00-.71 0L8 3.76 6.13 1.88a.5.5 0 00-.71 0L1.88 5.42a.5.5 0 000 .71L3.76 8l-1.88 1.87a.5.5 0 000 .71l3.54 3.54a.5.5 0 00.71 0L8 12.24l1.87 1.88a.5.5 0 00.71 0l3.54-3.54a.5.5 0 000-.71z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <div class="vscode-segment vscode-branch">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M11.75 5a1.75 1.75 0 10-1.5 1.732v1.018a.25.25 0 01-.25.25H6a.25.25 0 01-.25-.25V6.732a1.75 1.75 0 10-1.5 0v2.536a1.75 1.75 0 101.5 0V8.25A1.75 1.75 0 007.5 10h2.5a1.75 1.75 0 001.75-1.75V6.732A1.75 1.75 0 0011.75 5z"
+            fill="currentColor"></path>
+        </svg>
+        main
+      </div>
+      <div class="vscode-segment vscode-errors">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.36 9.65a.5.5 0 01-.71.71L8 8.71l-2.65 2.65a.5.5 0 01-.71-.71L7.29 8 4.64 5.35a.5.5 0 01.71-.71L8 7.29l2.65-2.65a.5.5 0 01.71.71L8.71 8l2.65 2.65z"
+            fill="currentColor"></path>
+        </svg>
+        0
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          style="margin-left: 6px;"
+        >
+          <path
+            d="M7.56 1.07a.75.75 0 01.88 0l6 4.5a.75.75 0 01-.88 1.22L8 2.85 2.44 6.79a.75.75 0 01-.88-1.22l6-4.5zM7.25 8a.75.75 0 011.5 0v4.25a.75.75 0 01-1.5 0V8z"
+            fill="currentColor"></path>
+        </svg>
+        0
+      </div>
+    </div>
+    <div class="vscode-center">
+      &copy; {new Date().getFullYear()} Iterative Research Inc.
+    </div>
+    <div class="vscode-right">
+      <div class="vscode-segment">Ln 1, Col 1</div>
+      <div class="vscode-segment">Spaces: 2</div>
+      <div class="vscode-segment">UTF-8</div>
+      <div class="vscode-segment">TypeScript</div>
+      <div class="vscode-segment vscode-bell">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M8 1.5A3.25 3.25 0 004.75 4.75v2.013c0 .58-.179 1.146-.513 1.62l-.91 1.29A1.25 1.25 0 004.35 12h7.3a1.25 1.25 0 001.023-1.327l-.91-1.29a2.75 2.75 0 01-.513-1.62V4.75A3.25 3.25 0 008 1.5zM6.5 13.5a1.5 1.5 0 003 0h-3z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+    </div>
+  </footer>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    padding-top: 0;
-    /* _Negative margin considered harmful_, crop the logo instead. */
-    margin-top: -1.5rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  footer {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.6em;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    text-wrap: balance;
-    margin-bottom: 2rem;
-  }
-  .logo {
-    height: 33vh;
-    max-height: fit-content;
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
     margin: 0 auto;
-    overflow: hidden;
+    padding: 3rem 1.5rem 1.5rem;
+  }
 
+  /* Large logo */
+  .hero-logo-wrap {
     display: flex;
+    align-items: baseline;
     justify-content: center;
-    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
   }
 
-  @media (max-width: 960px) {
-    h1 {
-      font-size: 3rem;
-    }
-    .logo {
-      height: 25vh;
-    }
+  .hero-logo {
+    display: block;
+    width: clamp(320px, 50vw, 560px);
+    height: auto;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+
+  .hero-logo-tagline {
+    font-size: clamp(1.5rem, 3vw, 2.75rem);
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: -0.02em;
+    transform: translateY(-0.15em);
   }
-  .link-card-grid {
+
+  /* Two-column hero */
+  .hero-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 0;
-    margin-top: 2.5rem;
+    align-items: start;
   }
 
-  .call-to-action {
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
 
-    text-align: center;
+  .hero-title {
+    font-family: "Geist Pixel Grid";
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
     text-wrap: balance;
   }
-  .call-to-action a {
-    color: rgb(var(--accent-light));
-    text-decoration: none;
+
+  .hero-accent {
+    color: var(--red);
+    position: relative;
   }
-  .call-to-action a:hover {
-    text-decoration: underline;
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 0.85em;
+    margin-bottom: 0.15em;
+    background: var(--red);
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
+    background: var(--red);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary:hover {
+    background: #b71c25;
+    box-shadow: 0 0 24px var(--red-glow);
+    transform: translateY(-1px);
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid var(--surface-border);
+    transition: all 0.2s ease;
+  }
+
+  .btn-ghost:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  /* ─── PIPELINE VISUALIZATION ─── */
+  .pipeline-window {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .pipeline-chrome {
+    border-bottom: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.015);
+  }
+
+  .pipeline-tabs {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .pipeline-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    letter-spacing: 0.03em;
+    border-right: 1px solid var(--surface-border);
+    transition: color 0.2s ease;
+    cursor: default;
+  }
+
+  .pipeline-tab.active {
+    color: var(--text);
+    background: var(--surface);
+    box-shadow: inset 0 -2px 0 var(--red);
+  }
+
+  .tab-icon {
+    color: var(--red);
+    margin-right: 0.25rem;
+    font-size: 0.5rem;
+  }
+
+  .pipeline-body {
+    padding: 1rem 1.125rem;
+    font-size: 0.7rem;
+  }
+
+  .pipeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.875rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid var(--surface-border);
+  }
+
+  .pipeline-run-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .pipeline-ts {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+  }
+
+  .pipeline-stages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stage {
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: calc(0.8s + var(--stage-delay, 0s));
+  }
+
+  .stage-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .stage-status {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .stage-status.done {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .stage-name {
+    flex: 1;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.72rem;
+  }
+
+  .stage-time {
+    color: var(--text-dim);
+    font-size: 0.6rem;
+  }
+
+  .stage-bar {
+    margin: 0.375rem 0 0 1.5rem;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .stage-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--red), #22c55e);
+    border-radius: 2px;
+    animation: fillBar 0.6s ease-out forwards;
+    animation-delay: calc(1s + var(--bar-delay, 0s));
+  }
+
+  @keyframes fillBar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: var(--fill, 100%);
+    }
+  }
+
+  .stage-detail {
+    margin: 0.25rem 0 0 1.5rem;
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    letter-spacing: 0.01em;
+  }
+
+  .stage-connector {
+    display: flex;
+    align-items: center;
+    padding-left: 0.47rem;
+    height: 16px;
+  }
+
+  .connector-line {
+    width: 1px;
+    height: 100%;
+    background: var(--surface-border);
+  }
+
+  .pipeline-result {
+    margin-top: 0.875rem;
+    padding-top: 0.625rem;
+    border-top: 1px solid var(--surface-border);
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #22c55e;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: calc(0.8s + var(--stage-delay, 0s));
+  }
+
+  .result-icon {
+    font-size: 0.5rem;
+    animation: blink 2s infinite;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-section {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .services-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.375rem;
+  }
+
+  .label-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--red);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* ─── CTA SECTION ─── */
+  .cta-section {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem 6rem;
+  }
+
+  .cta-box {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--red), transparent);
+  }
+
+  .cta-prompt {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-chevron {
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.625rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-align: left;
+  }
+
+  .cta-text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    flex: 1;
+    text-wrap: balance;
+    text-align: left;
+    margin: 0;
+  }
+
+  .cta-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cta-button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ─── VSCODE STATUS BAR ─── */
+  .vscode-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 22px;
+    padding: 0 0.5rem;
+    font-size: 0.65rem;
+    color: #cccccc;
+    background: #007acc;
+    user-select: none;
+  }
+
+  .vscode-left,
+  .vscode-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 100%;
+  }
+
+  .vscode-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .vscode-segment {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 7px;
+    height: 100%;
+    color: #ffffff;
+    transition: background 0.15s ease;
+    cursor: default;
+    white-space: nowrap;
+  }
+
+  .vscode-segment:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .vscode-remote {
+    background: #16825d;
+    padding: 0 8px;
+  }
+
+  .vscode-remote:hover {
+    background: #1a9e6f;
+  }
+
+  .vscode-branch svg,
+  .vscode-errors svg,
+  .vscode-bell svg,
+  .vscode-remote svg {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 1.5rem 1rem 1rem;
+    }
+
+    .hero-logo {
+      width: clamp(200px, 90vw, 768px);
+    }
+
+    .hero-logo-tagline {
+      font-size: 1.25rem;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .services-section,
+    .cta-section {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .cta-title {
+      text-align: left;
+    }
+
+    .cta-button {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .vscode-center {
+      display: none;
+    }
+
+    .vscode-right .vscode-segment:not(.vscode-bell) {
+      display: none;
+    }
   }
 </style>
+
+<script>
+  // Intersection Observer for scroll-triggered animations
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -30px 0px" },
+  );
+
+  document.querySelectorAll(".services-grid li, .cta-section").forEach((el) => {
+    el.classList.add("scroll-reveal");
+    observer.observe(el);
+  });
+</script>

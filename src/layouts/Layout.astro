@@ -12,43 +12,185 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Iterative Research full service research group"
+      content="Iterative Research — turning hard problems into predictable solutions through experimental development, optimization, and engineering excellence."
     />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#09090b" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
+    <div class="grid-overlay" aria-hidden="true"></div>
     <slot />
   </body>
 </html>
+
 <style is:global>
   :root {
-    --accent: 212, 31, 42; /* #d41f2a */
-    --accent-light: 241, 181, 184;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)),
-      white 60%
-    );
+    --red: #d41f2a;
+    --red-glow: rgba(212, 31, 42, 0.15);
+    --red-dim: rgba(212, 31, 42, 0.6);
+    --bg: #09090b;
+    --surface: #111113;
+    --surface-border: rgba(255, 255, 255, 0.06);
+    --text: #ededed;
+    --text-muted: #a1a1aa;
+    --text-dim: #52525b;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
   html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 22px; /* space for fixed VSCode status bar */
+  }
+
+  .grid-overlay {
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Cursor blink keyframes */
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes typeIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 var(--red-glow);
+    }
+    50% {
+      box-shadow: 0 0 20px 4px var(--red-glow);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out both;
+  }
+
+  .animate-delay-1 {
+    animation-delay: 0.1s;
+  }
+  .animate-delay-2 {
+    animation-delay: 0.2s;
+  }
+  .animate-delay-3 {
+    animation-delay: 0.3s;
+  }
+  .animate-delay-4 {
+    animation-delay: 0.4s;
+  }
+  .animate-delay-5 {
+    animation-delay: 0.5s;
+  }
+  .animate-delay-6 {
+    animation-delay: 0.6s;
+  }
+  .animate-delay-7 {
+    animation-delay: 0.7s;
+  }
+  .animate-delay-8 {
+    animation-delay: 0.8s;
+  }
+  .animate-delay-9 {
+    animation-delay: 0.9s;
+  }
+  .animate-delay-10 {
+    animation-delay: 1s;
+  }
+  .animate-delay-12 {
+    animation-delay: 1.2s;
+  }
+  .animate-delay-14 {
+    animation-delay: 1.4s;
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.5s ease-out,
+      transform 0.5s ease-out;
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger children in a grid */
+  .scroll-reveal:nth-child(2) {
+    transition-delay: 0.08s;
+  }
+  .scroll-reveal:nth-child(3) {
+    transition-delay: 0.16s;
+  }
+  .scroll-reveal:nth-child(4) {
+    transition-delay: 0.24s;
+  }
+
+  @font-face {
+    font-family: "Geist Pixel Grid";
+    src:
+      url("/geist/grid.woff2") format("woff2"),
+      url("/geist/grid.otf") format("opentype"),
+      url("/geist/grid.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
   }
 </style>
